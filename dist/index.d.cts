@@ -1,4 +1,4 @@
-export declare class ColorHandler {
+declare class ColorHandler {
     #private;
     constructor(red: number, green: number, blue: number);
     static random(): ColorHandler;
@@ -18,3 +18,5 @@ export declare class ColorHandler {
     clampColor(): ColorHandler;
     static sumAndClamp(colors: ColorHandler[]): ColorHandler;
 }
+
+export { ColorHandler };

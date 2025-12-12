@@ -1,10 +1,15 @@
 {
   "name": "colorhandler",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Color utilities for Geometry library",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "clean": "rm -rf dist",
+    "build": "tsup src/index.ts --format esm,cjs --dts --minify",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -13,7 +18,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/luke-hoffmann/ColorHandler/issues"
   },
@@ -25,6 +29,7 @@
     "usefulfunction": "github:luke-hoffmann/usefulfunction"
   },
   "devDependencies": {
+    "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
 }
