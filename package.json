@@ -17,7 +17,9 @@
     "minify": true,
     "dts": true,
     "format": [
-      "iife"
+      "iife",
+      "esm",
+      "cjs"
     ],
     "target": "es2022",
     "globalName": "colorhandler",
